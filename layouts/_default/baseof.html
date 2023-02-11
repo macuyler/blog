@@ -17,11 +17,9 @@
         <main>
             <article class="container">
                 <h1>{{ .Title }}</h1>
-                <small><strong>Written By:</strong> {{ .Params.author }}</small>
-                <br>
-                <small><strong>Last Updated:</strong> {{ .Date | time.Format ":date_long" }}</small>
-                <br>
-                <small><strong>Description:</strong> {{ .Description }}</small>
+                {{ block "details" . }}
+                {{ .Content }}
+                {{ end }}
                 <div class="transition"></div>
                 {{ block "main" . }}
                 {{ .Content }}

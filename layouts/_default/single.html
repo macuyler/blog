@@ -1,1 +1,8 @@
+{{ define "details" }}
+<small><strong>Written By:</strong> {{ .Params.author }}</small>
+<br>
+<small><strong>Last Updated:</strong> {{ .Date | time.Format ":date_long" }}</small>
+<br>
+<small><strong>Description:</strong> {{ .Description }}</small>
+{{ end }}
 {{ define "main" }}{{ end }}
