@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="{{ .Lang }}">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#1d1d1d" />
+        <meta name="description" content="{{ .Description }}" />
+        <meta name="author" content="{{ .Params.author }}" />
+        <meta name="keywords" content="{{ with .Params.tags }}{{ delimit . "," }}{{ end }}" />
+        <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+        <link rel="apple-touch-icon" href="%PUBLIC_URL%/apple-touch-icon.png" />
+        <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+        <link rel="stylesheet" href="/css/style.css" />
+        <title>{{ .Title }}</title>
+    </head>
+    <body>
+        <main>
+            <article class="container">
+                <h1>{{ .Title }}</h1>
+                <small><strong>Written By:</strong> {{ .Params.author }}</small>
+                <br>
+                <small><strong>Last Updated:</strong> {{ .Date | time.Format ":date_long" }}</small>
+                <br>
+                <small><strong>Description:</strong> {{ .Description }}</small>
+                <div class="transition"></div>
+                {{ block "main" . }}
+                {{ .Content }}
+                {{ end }}
+            </article>
+        </main>
+        <footer>
+            <div class="container">
+                <hr class="transition">
+                <strong><p>My links:</p></strong>
+                <ul class="indent">
+                    <li><a href="https://macuyler.com">My site</a></li>
+                    <li><a href="https://blog.macuyler.com">My blog</a></li>
+                    <li><a href="https://files.macuyler.com">My files</a></li>
+                    <li><a href="https://github.com/macuyler">My github</a></li>
+                </ul>
+                <div class="transition"></div>
+                <p class="talign-center">macuyler@protonmail.com</p>
+                <small class="talign-center">&copy; 2023 Macuyler Dunn</small>
+            </div>
+        </footer>
+    </body>
+</html>

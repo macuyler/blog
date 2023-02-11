@@ -1,0 +1,5 @@
+baseURL = 'https://blog.macuyler.com/'
+languageCode = 'en-us'
+title = 'Blog by Macuyler Dunn'
+disableKinds = ['taxonomy', 'taxonomyTerm']
+enableRobotsTXT = true

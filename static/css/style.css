@@ -1,0 +1,78 @@
+:root {
+    --fg: #fff;
+    --bg: #1d1d1d;
+    --link: #458588;
+    --fg-fade: rgba(255, 255, 255, 0.7);
+    --border: 2px solid var(--fg-fade);
+    --buffer: 50px;
+    --content: 800px;
+    --font: 
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+html {
+    color: var(--fg);
+    background-color: var(--bg);
+    font-size: 120%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0;
+}
+
+main {
+    margin: var(--buffer) 0;
+}
+
+footer {
+    width: 100%;
+    padding-bottom: var(--buffer);
+}
+
+small {
+    color: var(--fg-fade);
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    color: var(--link);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul.indent {
+    margin-left: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: var(--content);
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.transition {
+    margin-bottom: calc(var(--buffer) / 3 * 2);
+}
+
+.talign-center {
+    display: block;
+    text-align: center;
+}
