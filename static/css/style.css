@@ -3,10 +3,10 @@
     --bg: #1d1d1d;
     --link: #458588;
     --fg-fade: rgba(255, 255, 255, 0.7);
-    --border: 2px solid var(--fg-fade);
+    --bg-fade: rgba(255, 255, 255, 0.1);
+    --border: 1px solid var(--fg-fade);
     --buffer: 50px;
     --content: 800px;
-    --font: 
 }
 
 * {
@@ -40,12 +40,24 @@ footer {
     padding-bottom: var(--buffer);
 }
 
-small {
+blockquote {
+    border-left: var(--border);
+    padding: 6px 0 6px 20px;
+    margin: 20px 0 20px 20px;
+}
+
+blockquote p {
+    margin: 0;
+}
+
+blockquote, small {
     color: var(--fg-fade);
 }
 
 img {
     max-width: 100%;
+    display: block;
+    margin: 0 auto;
 }
 
 a {
@@ -55,6 +67,38 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+table {
+    max-width: fit-content;
+    display: block;
+    border-collapse: collapse;
+    overflow-x: auto;
+    margin: 0 auto;
+}
+
+thead {
+    background-color: var(--bg-fade);
+}
+
+td, th {
+    border: var(--border);
+    text-align: center;
+    padding: 10px;
+}
+
+pre {
+    width: 100%;
+    overflow-x: auto;
+    padding: 20px;
+}
+
+pre code {
+    padding-right: 20px;
+}
+
+ul {
+    margin-left: 10px;
 }
 
 ul.indent {
