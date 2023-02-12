@@ -1,7 +1,7 @@
 :root {
-    --fg: #fff;
+    --fg: #fafafa;
     --bg: #1d1d1d;
-    --link: #458588;
+    --link: #8bbfd5;
     --fg-fade: rgba(255, 255, 255, 0.7);
     --bg-fade: rgba(255, 255, 255, 0.1);
     --border: 1px solid var(--fg-fade);
@@ -12,6 +12,19 @@
 * {
     box-sizing: border-box;
     padding: 0;
+
+    /* Handle Scrollbars in Firefox */
+    scrollbar-color: rgba(255, 255, 255, 0.2) rgba(0, 0, 0, 0);
+    scrollbar-width: thin;
+}
+
+/* Handle Scrollbars in Chrome, Safari, and Edge */
+*::-webkit-scrollbar { width: 8px; }
+*::-webkit-scrollbar-track { background: rgba(0, 0, 0, 0); }
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
 }
 
 html {
